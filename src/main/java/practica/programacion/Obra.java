@@ -98,4 +98,18 @@ public abstract class Obra {
 
     public abstract void precioDeVenta();
 
+    @Override
+    public String toString() {
+        return
+            "00" + getId() + "\t" +
+             getNombre() + "\t" +
+             getAutor() + "\t" +
+             getTécnica() + "\t" +
+             getPrecio() + "$\t" +
+             getAltura() + "m     " +
+             getPeso() + "t     " +
+             getPieza() + "     " +
+             getDesc() + "";
+    }
+
 } //obra
