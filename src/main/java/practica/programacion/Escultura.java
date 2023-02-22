@@ -58,7 +58,4 @@ public class Escultura extends Obra {
         System.out.println("Precio final de venta($): " + precioFinal);
     }//precioDeVenta
 
-    
-
- 
 } //Escultura
