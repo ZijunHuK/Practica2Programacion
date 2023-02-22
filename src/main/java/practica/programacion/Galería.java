@@ -61,5 +61,40 @@ public class Galería {
                 System.out.println(invalido);
         } //switch
     } //visualizarObraExpuesta
+
+    public void obtenerPrecio(){
+
+        final String introduce = "Precio de que obra quieres?, teclea ID de la obra sin los dos 0";
+        final String invalido = "ID NO EXISTE";
+        int numId = 0;
+
+        try{
+            Scanner sca = new Scanner(System.in);
+            System.out.println(introduce);
+            numId = sca.nextInt();
+        } catch (InputMismatchException b) {
+            System.out.println(invalido);
+        } //try
+
+        switch (numId) {
+            case 1:
+                obra1.precioDeVenta();
+                break;
+            case 2:
+                obra2.precioDeVenta();
+                break;
+            case 3:
+                obra3.precioDeVenta();
+                break;
+            case 4:
+                obra4.precioDeVenta();
+                break;
+            case 5:
+                obra5.precioDeVenta();
+                break;
+            default :
+                System.out.println(invalido);
+        } //switch
+    } //obtenerPrecio
     
 }
