@@ -131,4 +131,4 @@ public class Galería {
         } //switch
     } //imprimirEtiqueta
     
-}
+} //Galería
