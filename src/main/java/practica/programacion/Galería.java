@@ -1,5 +1,8 @@
 package practica.programacion;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Galería {
 
     private Obra obra1 = new Pintura(1, "Guernica\t\t", "P.Picasso", "Óleo\t", 1000, 5, 2, 5, "cuadro guerra civil" ){};
@@ -16,5 +19,47 @@ public class Galería {
         System.out.println(obra4);
         System.out.println(obra5); 
     } //vizualizarObrasExistentes
+
+    public void darDeAlta(){}
+    public void modificarDatosDeObra(){}
+
+    public void visualizarObraExpuesta(){
+        final String introduce = "Qué obra quiere visualizar?, teclea ID sin los dos 0";
+        final String invalido = "ID NO EXISTE";
+        int numId = 0;
+
+        try{
+            Scanner sca = new Scanner(System.in);
+            System.out.println(introduce);
+            numId = sca.nextInt();
+        } catch (InputMismatchException a) {
+            System.out.println(invalido);
+        } //try
+
+        switch (numId) {
+            case 1:
+                System.out.println("Nombre: " + obra1.getNombre() + "\nAutor: " + obra1.getAutor() + "\nPrecio($): " + obra1.getPrecio()
+                + "\nAltura(m)" + obra1.getAltura() + "\nPeso(t): " + obra1.getPeso() + "\nNúmero de piezas: " + obra1.getPieza());
+                break;
+            case 2:
+                System.out.println("Nombre: " + obra2.getNombre() + "\nAutor: " + obra2.getAutor() + "\nPrecio($): " + obra2.getPrecio()
+                + "\nAltura(m)" + obra2.getAltura() + "\nPeso(t): " + obra2.getPeso() + "\nNúmero de piezas: " + obra2.getPieza());
+                break;
+            case 3:
+                System.out.println("Nombre: " + obra3.getNombre() + "\nAutor: " + obra3.getAutor() + "\nPrecio($): " + obra3.getPrecio()
+                + "\nAltura(m)" + obra3.getAltura() + "\nPeso(t): " + obra3.getPeso() + "\nNúmero de piezas: " + obra3.getPieza());
+                break;
+            case 4:
+                System.out.println("Nombre: " + obra4.getNombre() + "\nAutor: " + obra4.getAutor() + "\nPrecio($): " + obra4.getPrecio()
+                + "\nAltura(m)" + obra4.getAltura() + "\nPeso(t): " + obra4.getPeso() + "\nNúmero de piezas: " + obra4.getPieza());
+                break;
+            case 5:
+                System.out.println("Nombre: " + obra5.getNombre() + "\nAutor: " + obra5.getAutor() + "\nPrecio($): " + obra5.getPrecio()
+                + "\nAltura(m)" + obra5.getAltura() + "\nPeso(t): " + obra5.getPeso() + "\nNúmero de piezas: " + obra5.getPieza());
+                break;
+            default:
+                System.out.println(invalido);
+        } //switch
+    } //visualizarObraExpuesta
     
 }
