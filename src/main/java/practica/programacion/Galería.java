@@ -96,5 +96,39 @@ public class Galería {
                 System.out.println(invalido);
         } //switch
     } //obtenerPrecio
+
+    public void imprimirEtiqueta() {
+        final String introduce = "De etiqueta de que obra quiere imprimir?, teclea ID de la obra sin los dos 0";
+        final String invalido = "ID NO EXISTE";
+        int numId = 0;
+
+        try{
+            Scanner sca = new Scanner(System.in);
+            System.out.println(introduce);
+            numId = sca.nextInt();
+        } catch (InputMismatchException c) {
+            System.out.println(invalido);
+        } //try
+
+        switch (numId) {
+            case 1:
+                System.out.println("Nombre: " + obra1.getNombre() + "\nAutor: " + obra1.getAutor() + "\nDescripción: " + obra1.getDesc());
+                break;
+            case 2:
+                System.out.println("Nombre: " + obra2.getNombre() + "\nAutor: " + obra2.getAutor() + "\nDescripción: " + obra2.getDesc());
+                break;
+            case 3:
+                System.out.println("Nombre: " + obra3.getNombre() + "\nAutor: " + obra3.getAutor() + "\nDescripción: " + obra3.getDesc());
+                break;
+            case 4:
+                System.out.println("Nombre: " + obra4.getNombre() + "\nAutor: " + obra4.getAutor() + "\nDescripción: " + obra4.getDesc());
+                break;
+            case 5:
+                System.out.println("Nombre: " + obra5.getNombre() + "\nAutor: " + obra5.getAutor() + "\nDescripción: " + obra5.getDesc());
+                break;
+            default:
+            System.out.println(invalido);       
+        } //switch
+    } //imprimirEtiqueta
     
 }
