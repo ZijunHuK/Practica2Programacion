@@ -53,6 +53,4 @@ public class Pintura extends Obra {
             System.out.println("Precio final de venta($): " + precioFinal);
         } //precioDeVenta
 
-
- 
 } //Pintura
